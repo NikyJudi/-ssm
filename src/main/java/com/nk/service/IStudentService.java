@@ -9,5 +9,7 @@ public interface IStudentService {
 
     void addStudent(Student student);
 
-    void deleteStudent(Student student);
+    void deleteStudent(String id);
+
+    void update(Student student, String oldId);
 }

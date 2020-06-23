@@ -15,16 +15,26 @@ public class StudentService implements IStudentService {
 
     @Override
     public List<Student> findAll() {
-        return null;
+        return iStudentDao.findAll();
     }
 
     @Override
     public void addStudent(Student student) {
-
+        iStudentDao.addStudent(student);
     }
 
     @Override
-    public void deleteStudent(Student student) {
+    public void deleteStudent(String id) {
+        iStudentDao.deleteStudent(id);
+    }
 
+    @Override
+    public void update(Student student, String oldId) {
+        iStudentDao.updateStudent(student.getId(), student.getName(), student.getMoney(), oldId);
+    }
+
+    public Student findStudent(String id) {
+
+        return iStudentDao.findStudent(id);
     }
 }

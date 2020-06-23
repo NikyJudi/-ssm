@@ -14,10 +14,23 @@ http://www.springframework.org/schema/tx
 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- 开启注解扫描-->
-    <context:component-scan base-package="com.nk.service.*"/>
+    <context:component-scan base-package="com.nk">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
 <!--    <context:annotation-config/>-->
+<!--    连接池-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql:///student_card" />
+        <property name="user" value="root"/>
+        <property name="password" value="root" />
+    </bean>
 
+<!--    SqlSessionFactory工厂-->
+    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
     <!--配置Dao接口所在包-->
     <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.nk.dao"/>

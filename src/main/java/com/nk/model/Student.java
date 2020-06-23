@@ -3,24 +3,24 @@ package com.nk.model;
 import java.io.Serializable;
 
 public class Student implements Serializable {
-    private String userId;
-    private String userName;
+    private String id;
+    private String name;
     private double money;
 
-    public String getUserId() {
-        return userId;
+    public String getId() {
+        return id;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getMoney() {
@@ -34,8 +34,8 @@ public class Student implements Serializable {
     @Override
     public String toString() {
         return "Student_info{" +
-                "userId='" + userId + '\'' +
-                ", userName='" + userName + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
                 ", money=" + money +
                 '}';
     }

@@ -27,7 +27,7 @@ public class TestMybatis {
         }
         User user = new User();
         user.setPassword("233");
-        user.setUserId("233");
+        user.setId("233");
         User user2 = dao.login(user);
         System.out.println(user2);
         sqlSession.close();
