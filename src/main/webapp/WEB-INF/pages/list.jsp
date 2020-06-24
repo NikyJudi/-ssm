@@ -6,7 +6,17 @@
     <title>学生信息管理</title>
 </head>
 <body>
-
+<form method="post" action="/list/add">
+    <h3 class="h3 mb-3 font-weight-normal">请输入新增学生信息</h3>
+    <label for="id" class="sr-only">id</label>
+    <input type="text" id="id" name="id" class="form-control" required="" autofocus="">
+    <label for="name" class="sr-only">姓名</label>
+    <input type="text" id="name" name="name" class="form-control" required="" autofocus="">
+    <label for="money" class="sr-only">余额</label>
+    <input type="text" id="money" name="money" class="form-control" required="" autofocus="">
+    <button class="btn btn-lg btn-outline-secondary btn-block" type="submit">提交</button>
+</form>
+<h3 class="h3 mb-3 font-weight-normal">学生列表信息</h3>
 <table class="table">
         <table class="table">
             <thead>

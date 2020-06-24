@@ -12,7 +12,7 @@ public interface IStudentDao {
     @Select("select * from stu_info")
     List<Student> findAll();
 
-    @Insert("insert into stu_info(id,name) values(#{id},#{name})")
+    @Insert("insert into stu_info(id,name,money) values(#{id},#{name},#{money})")
     void addStudent(Student student);
 
     @Delete("delete from stu_info where id=#{id}")

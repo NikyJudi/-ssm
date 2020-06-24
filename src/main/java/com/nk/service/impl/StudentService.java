@@ -34,7 +34,6 @@ public class StudentService implements IStudentService {
     }
 
     public Student findStudent(String id) {
-
         return iStudentDao.findStudent(id);
     }
 }

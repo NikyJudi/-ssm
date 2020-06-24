@@ -26,8 +26,6 @@ public class StudentController {
         return "list";
     }
 
-
-
     // http://localhost:8080/list/233/delete
     @RequestMapping("/list/{id}/delete")
     public String delete(@PathVariable("id") String id) {
@@ -49,5 +47,11 @@ public class StudentController {
         Student student = studentService.findStudent(id);
         model.addAttribute("student",student);
         return "form";
+    }
+
+    @RequestMapping("/list/add")
+    public String form(Student student) {
+        studentService.addStudent(student);
+        return "redirect:/students";
     }
 }
