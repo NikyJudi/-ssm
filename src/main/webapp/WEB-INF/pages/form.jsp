@@ -11,17 +11,18 @@
     <title>修改信息</title>
 </head>
 <body>
+    <h3>原信息</h3>
     <table class="table-view">
         <tbody>
         <tr>
-            <td scope="row">${student.id}</td>
-            <td>${student.name}</td>
-            <td>${student.money}</td>
+            <td scope="row">学生id${student.id}</td>
+            <td>学生姓名${student.name}</td>
+            <td>余额${student.money}</td>
         </tr>
         </tbody>
     </table>
     <form class="form-signin" method="post" action="/list/${student.id}/update">
-        <h1 class="h3 mb-3 font-weight-normal">请输入此学生新的信息</h1>
+        <h3 class="h3 mb-3 font-weight-normal">请输入此学生新的信息</h3>
         <label for="id" class="sr-only">id</label>
         <input type="text" id="id" name="id" class="form-control" required="" autofocus="">
         <label for="name" class="sr-only">姓名</label>

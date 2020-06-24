@@ -9,7 +9,8 @@ public class BlogConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginInterceptor())
+                .excludePathPatterns("/login")
                 .excludePathPatterns("/")
-                .excludePathPatterns("/login");
+                .excludePathPatterns("/register");
     }
 }

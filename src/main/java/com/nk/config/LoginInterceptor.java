@@ -17,15 +17,17 @@ public class LoginInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        HttpSession session = request.getSession(false);//获取session，如果没有，返回null
+        HttpSession session = request.getSession();//获取session，如果没有，返回null
+        System.out.println("Handle session:"+session);
         if(session != null){
-            Object user = session.getAttribute("user");
+            Object user = session.getAttribute("user"); 
+            System.out.println("handleuser:"+user);
             if(user != null){
                 return true;
             }
         }
-        response.sendRedirect("index");
-        return false;
+            response.sendRedirect("/");
+        return true;
     }
 //
 //    private static ConcurrentHashMap<String, Long> map = new ConcurrentHashMap<>();

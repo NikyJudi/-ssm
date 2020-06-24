@@ -2,9 +2,12 @@ package com.nk;
 
 import org.junit.Test;
 
+import java.util.Random;
+
 public class T {
     @Test
     public void tt(){
-        System.out.println("11111");
+        Random random = new Random(1);
+        int n = random.nextInt();
     }
 }

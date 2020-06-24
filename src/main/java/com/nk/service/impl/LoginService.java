@@ -17,4 +17,10 @@ public class LoginService implements ILoginService {
         System.out.println("登录");
         return iLoginDao.login(user);
     }
+
+    @Override
+    public void addUser(User user) {
+        System.out.println(user);
+        iLoginDao.addUser(user);
+    }
 }
