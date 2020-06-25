@@ -11,7 +11,19 @@
 <head>
     <title>首页</title>
 </head>
-
+<style>
+    .text-truncate {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap
+    }
+    .card-text {
+        line-height: 21px;
+        height: 21px;
+        overflow: hidden;
+        width: 30%;
+    }
+</style>
 <body>
 <%--<form id="_form" method="post" action="/myinfo/${student.id}">--%>
 <%--    <input type="hidden" name="name" value="value" />--%>
