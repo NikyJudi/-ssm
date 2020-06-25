@@ -8,4 +8,6 @@ public interface ILoginService {
     User login(User user);
 
     void addUser(User user);
+
+    void updatePWById(String id, String password);
 }

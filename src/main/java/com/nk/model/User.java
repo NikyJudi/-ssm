@@ -5,7 +5,16 @@ import java.io.Serializable;
 public class User implements Serializable {
     private String id;
     private String password;
+    private byte identity;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", password='" + password + '\'' +
+                ", identity=" + identity +
+                '}';
+    }
 
     public String getId() {
         return id;
@@ -23,11 +32,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public byte getIdentity() {
+        return identity;
+    }
+
+    public void setIdentity(byte identity) {
+        this.identity = identity;
     }
 }

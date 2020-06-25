@@ -24,10 +24,10 @@
 <!--        <mvc:resources location="/js/" mapping="/js/**" />-->
     <mvc:annotation-driven/>
 
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**" />
-            <bean class="com.nk.config.LoginInterceptor"></bean>
-        </mvc:interceptor>
-    </mvc:interceptors>
+<!--    <mvc:interceptors>-->
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/**" />-->
+<!--            <bean class="com.nk.config.LoginInterceptor"></bean>-->
+<!--        </mvc:interceptor>-->
+<!--    </mvc:interceptors>-->
 </beans>

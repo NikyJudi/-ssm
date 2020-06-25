@@ -12,4 +12,14 @@ public interface IStudentService {
     void deleteStudent(String id);
 
     void update(Student student, String oldId);
+
+    Student findStudent(String id);
+
+    List<Student> findStudentByName(String name);
+
+    List<Student> findStudentByGrade(Byte grade);
+
+    List<Student> findStudentById(String id);
+
+    void updateSignature(String id, String signature);
 }

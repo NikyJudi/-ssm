@@ -22,7 +22,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 <!--    连接池-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql:///student_card" />
+        <property name="jdbcUrl" value="jdbc:mysql:///student_card2" />
         <property name="user" value="root"/>
         <property name="password" value="root" />
     </bean>

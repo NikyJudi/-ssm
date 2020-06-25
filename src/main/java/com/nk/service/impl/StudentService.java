@@ -30,10 +30,29 @@ public class StudentService implements IStudentService {
 
     @Override
     public void update(Student student, String oldId) {
-        iStudentDao.updateStudent(student.getId(), student.getName(), student.getMoney(), oldId);
+        iStudentDao.updateStudent(student.getId(), student.getName(), student.getGrade(), oldId);
     }
 
     public Student findStudent(String id) {
         return iStudentDao.findStudent(id);
+    }
+
+    public List<Student> findStudentByName(String name) {
+        return iStudentDao.findStudentByName(name);
+    }
+
+    @Override
+    public List<Student> findStudentByGrade(Byte grade) {
+        return iStudentDao.findStudentByGrade(grade);
+    }
+
+    @Override
+    public List<Student> findStudentById(String id) {
+        return iStudentDao.findStudentById(id);
+    }
+
+    @Override
+    public void updateSignature(String id, String signature) {
+        iStudentDao.updateSignature(id, signature);
     }
 }

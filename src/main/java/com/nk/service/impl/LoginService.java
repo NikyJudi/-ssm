@@ -23,4 +23,9 @@ public class LoginService implements ILoginService {
         System.out.println(user);
         iLoginDao.addUser(user);
     }
+
+    @Override
+    public void updatePWById(String id, String password) {
+        iLoginDao.updatePWById(id,password);
+    }
 }
