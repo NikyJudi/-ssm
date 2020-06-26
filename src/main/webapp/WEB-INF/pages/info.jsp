@@ -32,7 +32,7 @@
     <p>${picture.content}</p>
 
     <a href="/delete/q/${picture.id}">删除</a>
-    <a href="/update/q/${picture.id}">修改</a>
+    <a href="/editor/q/${picture.id}">修改</a>
     <br>
 </c:forEach>
 </body>

@@ -38,4 +38,14 @@ public class PictureService implements IPictureService {
     public void deletePictureById(Long id) {
         pictureDao.deletePictureById(id);
     }
+
+    @Override
+    public Picture find(Long id) {
+        return pictureDao.find(id);
+    }
+
+    @Override
+    public void updateContent(String content, Long id) {
+        pictureDao.updateContent(content, id);
+    }
 }

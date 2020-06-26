@@ -15,4 +15,8 @@ public interface IPictureService {
     Picture findAllById(Long id);
 
     void deletePictureById(Long id);
+
+    Picture find(Long id);
+
+    void updateContent(String content, Long id);
 }

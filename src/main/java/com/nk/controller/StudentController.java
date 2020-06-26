@@ -114,4 +114,5 @@ public class StudentController {
         studentService.updateSignature(id,signature);
         return "redirect:/myinfo/"+id;
     }
+
 }

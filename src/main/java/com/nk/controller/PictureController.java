@@ -36,4 +36,19 @@ public class PictureController {
         pictureService.deletePictureById(id);
         return "redirect:/myinfo/"+stuId;
     }
+
+    @RequestMapping("/editor/q/{id}")
+    public String editor(@PathVariable("id") Long id, Model model) {
+        Picture picture = pictureService.find(id);
+        model.addAttribute("picture", picture);
+        return "editor";
+    }
+
+    @RequestMapping("/editor/writer/{id}")
+    public String writer(@PathVariable("id")Long id, String content) {
+        Picture picture = pictureService.find(id);
+        String stuId = pictureService.findStuIdById(id);
+        pictureService.updateContent(content,id);
+        return "redirect:/myinfo/"+stuId;
+    }
 }
